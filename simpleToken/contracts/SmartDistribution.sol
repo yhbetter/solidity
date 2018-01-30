@@ -4,13 +4,27 @@ import "Token.sol";
 
 contract SmartDistribution {
 
+    //地址期权余额
     mapping (address => uint256) public balance;
-    address[] addressList;
+    //所有地址集合
+    address[] public addressList;
+    //期权总数
     uint256 public totalSupply;
+    //支付的所有token
     Token[] public supportTokens;
-    mapping(address => uint256) public tokenBalance;
+    //token余额和总数
+    mapping(address => TokenBalance) public tokenBalance;
 
-  function SmartDistribution(address[] _as,uint256[] _bs) {
+
+    //地址期权余额
+    mapping (address => mapping(address=>uint256)) public alreadSendBalance;
+
+    struct TokenBalance {
+      uint256 total;
+      uint256 balance;
+    }
+
+  function SmartDistribution(address[] _as,uint256[] _bs) public{
         require(_as.length > 0);
         require(_as.length == _bs.length);
         for (uint i = 0; i <  _as.length; i++) {
@@ -20,35 +34,32 @@ contract SmartDistribution {
         addressList = _as;
     }
 
-    function support(Token[] tokens) {
-        for(uint i = 0 ; i < tokens.length ; i++){
-            Token t = tokens[i];
-            uint val =tokenBalance[t];
-            if(val>0){
-              continue;
-            }
-            supportTokens.push(t);
-            tokenBalance[t] =  t.balanceOf(this);
-        }
+    function support(Token t) public{
+     TokenBalance balance = tokenBalance[t];
+      uint256 nowBalance = t.balanceOf(this);
+      balance.total = balance.total+nowBalance-balance.balance;
     }
 
-    function claim(Token token){
+    function claim(Token token) public{
       this.claimTo(token, msg.sender);
     }
 
-    function claimTo(Token token,address ads) {
-
+    function claimTo(Token token,address ads) public{
           require(balance[ads]>0);
-          uint val = (balance[ads]/totalSupply)*tokenBalance[token];
+          TokenBalance bal = tokenBalance[token];
+          uint256 alreadSend = alreadSendBalance[token][ads];
+          uint256 val = (balance[ads]/totalSupply)*(bal.total)-alreadSend;
+          require(val > 0);
           token.transfer(ads,val);
+          alreadSendBalance[token][ads] = alreadSend + val;
     }
 
 
-        function () payable {
-          for(uint i = 0;i< supportTokens.length;i++){
-            this.claim(supportTokens[i]);
-          }
-        }
+    function () payable {
+      for(uint i = 0;i< supportTokens.length;i++){
+        this.claim(supportTokens[i]);
+      }
+    }
 
     function claimAll() {
       for(uint i = 0;i< addressList.length;i++){
