@@ -12,12 +12,14 @@ contract TestToken {
     address ad2;
 
     uint256  smartBal;
+    uint256 ad2Bal;
+    uint256 ad1Bal;
 
 
     address[]  aList;
     uint256[]   uList;
 
-    function beforeAll() public{
+    function beforeAll() public {
 
         token = new HumanStandardToken(100000000000000, "AS ANGEL", 8, "ASA");
         ad1 = address(this);
@@ -48,14 +50,24 @@ contract TestToken {
 
 
         smart.support(token);
-        smart.claimTo(token,ad2);
 
 
+        smart.claimTo(token, ad2);
         smartBal = token.balanceOf(smart);
         Assert.equal(smartBal, 1000000, "smart 2 balance error ");
 
+        ad2Bal = token.balanceOf(ad2);
+        Assert.equal(ad2Bal, 2000000, "address 2 balance error ");
 
 
+//        smart.claim(token);
+        ad1.transfer(0);
+        smartBal = token.balanceOf(smart);
+        Assert.equal(smartBal, 0, "smart 2 balance error ");
+
+
+        ad1Bal = token.balanceOf(ad1);
+        Assert.equal(ad1Bal, 99999998000000, "address 1 balance error ");
 
     }
 }

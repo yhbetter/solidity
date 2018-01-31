@@ -33,8 +33,8 @@
           <file leaf-file-name="TestToken.sol" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/TestToken.sol">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="802">
-                  <caret line="54" column="29" lean-forward="false" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+                <state relative-caret-position="702">
+                  <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -57,8 +57,8 @@
           <file leaf-file-name="SmartDistribution.sol" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/contracts/SmartDistribution.sol">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="738">
-                  <caret line="67" column="61" lean-forward="true" selection-start-line="67" selection-start-column="61" selection-end-line="67" selection-end-column="61" />
+                <state relative-caret-position="453">
+                  <caret line="53" column="30" lean-forward="false" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
                   <folding />
                 </state>
               </provider>
@@ -79,6 +79,7 @@
     <findStrings>
       <find>SmartDistribution</find>
       <find>ad2</find>
+      <find>smartBalsmartBal</find>
       <find>eth_call</find>
     </findStrings>
   </component>
@@ -86,8 +87,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/query.html" />
-        <option value="$PROJECT_DIR$/contracts/SmartDistribution.sol" />
         <option value="$PROJECT_DIR$/test/TestToken.sol" />
+        <option value="$PROJECT_DIR$/contracts/SmartDistribution.sol" />
       </list>
     </option>
   </component>
@@ -295,12 +296,12 @@
       <workItem from="1517306971199" duration="159000" />
       <workItem from="1517307151632" duration="69000" />
       <workItem from="1517307246040" duration="35000" />
-      <workItem from="1517307299802" duration="7078000" />
+      <workItem from="1517307299802" duration="9581000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7591000" />
+    <option name="totallyTimeSpent" value="10094000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-741" width="1080" height="1920" extended-state="0" />
@@ -494,24 +495,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/contracts/StandardToken.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/SmartDistribution.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="67" column="61" lean-forward="true" selection-start-line="67" selection-start-column="61" selection-end-line="67" selection-end-column="61" />
+        <state relative-caret-position="720">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/TestToken.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="802">
-          <caret line="54" column="29" lean-forward="false" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+        <state relative-caret-position="702">
+          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contracts/SmartDistribution.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="53" column="30" lean-forward="false" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
           <folding />
         </state>
       </provider>

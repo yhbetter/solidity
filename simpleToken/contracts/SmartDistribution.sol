@@ -51,7 +51,7 @@ contract SmartDistribution {
         uint256 alreadSend = alreadSendBalance[token][ads];
         uint256 val = ((balance[ads] * bal.total)/ totalSupply)  - alreadSend;
         require(val > 0);
-        token.transfer(ads, val);
+        token.transfer.val(0).gas(60000)(ads, val);
         alreadSendBalance[token][ads] = alreadSend + val;
 
     }
