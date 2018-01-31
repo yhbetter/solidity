@@ -10,6 +10,7 @@ contract TestToken {
     HumanStandardToken token;
     address ad1;
     address ad2;
+    address ad3;
 
     uint256  smartBal;
     uint256 ad2Bal;
@@ -18,6 +19,9 @@ contract TestToken {
 
     address[]  aList;
     uint256[]   uList;
+
+
+    uint256 count;
 
     function beforeAll() public {
 
@@ -33,8 +37,43 @@ contract TestToken {
         uList[1] = 20;
     }
 
+    //
+    //    function testSmart() public {
+    //
+    //
+    //        uint256 bal = token.balanceOf(ad1);
+    //        Assert.equal(bal, 100000000000000, "Token balance is ");
+    //
+    //        smart = new SmartDistribution(aList, uList);
+    //        bool result = token.transfer(smart, 3000000);
+    //        Assert.isTrue(result, "transfer fail ");
+    //
+    //
+    //        smartBal = token.balanceOf(smart);
+    //        Assert.equal(smartBal, 3000000, "smart balance error ");
+    //
+    //
+    //        smart.support(token);
+    //
+    //
+    //        smart.claimTo(token, ad2);
+    //        smartBal = token.balanceOf(smart);
+    //        Assert.equal(smartBal, 1000000, "smart 2 balance error ");
+    //
+    //        ad2Bal = token.balanceOf(ad2);
+    //        Assert.equal(ad2Bal, 2000000, "address 2 balance error ");
+    //
+    //
+    //        smart.claim(token);
+    //        smartBal = token.balanceOf(smart);
+    //        Assert.equal(smartBal, 0, "smart 2 balance error ");
+    //
+    //        ad1Bal = token.balanceOf(ad1);
+    //        Assert.equal(ad1Bal, 99999998000000, "address 1 balance error ");
+    //    }
 
-    function testSmart() public {
+
+    function testAll() public {
 
 
         uint256 bal = token.balanceOf(ad1);
@@ -52,22 +91,15 @@ contract TestToken {
         smart.support(token);
 
 
-        smart.claimTo(token, ad2);
+        smart.claimAll();
         smartBal = token.balanceOf(smart);
-        Assert.equal(smartBal, 1000000, "smart 2 balance error ");
+        Assert.equal(smartBal, 0, "smart 2 balance error ");
 
         ad2Bal = token.balanceOf(ad2);
         Assert.equal(ad2Bal, 2000000, "address 2 balance error ");
 
 
-//        smart.claim(token);
-        ad1.transfer(0);
-        smartBal = token.balanceOf(smart);
-        Assert.equal(smartBal, 0, "smart 2 balance error ");
-
-
         ad1Bal = token.balanceOf(ad1);
         Assert.equal(ad1Bal, 99999998000000, "address 1 balance error ");
-
     }
 }

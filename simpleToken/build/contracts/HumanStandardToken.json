@@ -317,7 +317,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 622,
+          "SourceUnit": 626,
           "absolutePath": "/Users/yanghang/Workspace/eth/workspace/solidity/simpleToken/contracts/StandardToken.sol",
           "file": "./StandardToken.sol",
           "scope": 110,
@@ -333,16 +333,16 @@
       {
         "attributes": {
           "contractDependencies": [
-            621,
-            687
+            625,
+            691
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
             109,
-            621,
-            687
+            625,
+            691
           ],
           "name": "HumanStandardToken",
           "scope": 110
@@ -359,7 +359,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "StandardToken",
-                  "referencedDeclaration": 621,
+                  "referencedDeclaration": 625,
                   "type": "contract StandardToken"
                 },
                 "id": 3,
@@ -439,7 +439,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 702,
+                              "referencedDeclaration": 706,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -773,7 +773,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 614,
+                                  "referencedDeclaration": 618,
                                   "type": "mapping(address => uint256)",
                                   "value": "balances"
                                 },
@@ -799,7 +799,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 699,
+                                      "referencedDeclaration": 703,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -860,7 +860,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 625,
+                              "referencedDeclaration": 629,
                               "type": "uint256",
                               "value": "totalSupply"
                             },
@@ -1230,7 +1230,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 620,
+                                      "referencedDeclaration": 624,
                                       "type": "mapping(address => mapping(address => uint256))",
                                       "value": "allowed"
                                     },
@@ -1256,7 +1256,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 699,
+                                          "referencedDeclaration": 703,
                                           "type": "msg",
                                           "value": "msg"
                                         },
@@ -1353,7 +1353,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 686,
+                              "referencedDeclaration": 690,
                               "type": "function (address,address,uint256)",
                               "value": "Approval"
                             },
@@ -1379,7 +1379,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 699,
+                                  "referencedDeclaration": 703,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -1608,7 +1608,7 @@
                                               "overloadedDeclarations": [
                                                 null
                                               ],
-                                              "referencedDeclaration": 693,
+                                              "referencedDeclaration": 697,
                                               "type": "function () pure returns (bytes32)",
                                               "value": "keccak256"
                                             },
@@ -1666,7 +1666,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 699,
+                                      "referencedDeclaration": 703,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -1699,7 +1699,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 714,
+                                  "referencedDeclaration": 718,
                                   "type": "contract HumanStandardToken",
                                   "value": "this"
                                 },
@@ -1761,7 +1761,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 702,
+                                      "referencedDeclaration": 706,
                                       "type": "function (bool) pure",
                                       "value": "require"
                                     },
@@ -1859,5 +1859,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-01-31T05:55:13.058Z"
+  "updatedAt": "2018-01-31T08:26:24.591Z"
 }

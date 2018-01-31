@@ -38,6 +38,8 @@ contract SmartDistribution {
         TokenBalance storage bal = tokenBalance[t];
         uint256 nowBalance = t.balanceOf(this);
         bal.total = bal.total + nowBalance - bal.balance;
+
+        supportTokens.push(t);
         return true;
     }
 
@@ -51,7 +53,7 @@ contract SmartDistribution {
         uint256 alreadSend = alreadSendBalance[token][ads];
         uint256 val = ((balance[ads] * bal.total)/ totalSupply)  - alreadSend;
         require(val > 0);
-        token.transfer.val(0).gas(60000)(ads, val);
+        token.transfer(ads, val);
         alreadSendBalance[token][ads] = alreadSend + val;
 
     }
@@ -59,14 +61,15 @@ contract SmartDistribution {
 
     function() payable public {
         for (uint i = 0; i < supportTokens.length; i++) {
-            this.claim(supportTokens[i]);
+            claim(supportTokens[i]);
         }
     }
 
     function claimAll() public {
+
         for (uint i = 0; i < addressList.length; i++) {
-            for (uint j = 0; j < supportTokens.length; i++) {
-                this.claimTo(supportTokens[j], addressList[i]);
+            for (uint j = 0; j < supportTokens.length; j++) {
+                this.claimTo(supportTokens[j],addressList[i]);
             }
         }
 
