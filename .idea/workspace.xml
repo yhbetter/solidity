@@ -1,7 +1,187 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cef8d769-4049-41c7-a87f-884c2cc735fe" name="Default" comment="" />
+    <list default="true" id="cef8d769-4049-41c7-a87f-884c2cc735fe" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/default.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/delete.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/down.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/equals.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/header_guduo_wechat.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/loading-sm.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/owl-login-arm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/owl-login-arm@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/owl-login.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/owl-login@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/ph-owl-arm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/ph-owl-arm@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/ph-owl-arml.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/ph-owl-arml@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/signup-arm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/signup-arm@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/thead_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/tieba.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/img/up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/Sortable.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/actor_edit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/actor_gold_billboard.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/actor_list.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/actor_recommend_list.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/add_show.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/ads.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/alias_show.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/auto_billboard.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/billboard.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/bootstrap-datetimepicker.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/bootstrap-dialog.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/bootstrap-editable.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/bootstrap-paginator.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/bootstrap-select.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/bootstrap-switch.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/bootstrap-treeview.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/check.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/check_show.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/chplayer.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/chplayer.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/collapse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/common.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/company_list.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/drama_audience_ratiing.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/drop.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/echarts.common.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/echarts.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/edit_show.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/extendPagination.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/fileinput.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/fileinput_locale_zh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/gdi_special.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/hash.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/html5shiv.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/jquery-3.1.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/jquery-ui-1.10.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/jquery.1.7.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/jquery.datagrid.bootstrap3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/jquery.datagrid.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/jquery.tag-editor.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/jquery.validate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/jquery.ztree.all.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/jquery.ztree.core.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/jquery.ztree.excheck.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/jquery.ztree.exedit.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/jquery.ztree.exhide.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/keyword.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/logs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/market_share_billboard.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/messages_cn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/official_topic.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/opinion_words.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/participle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/pc_platform_trend.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/pc_repair.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/pc_repair_day.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/Moxie.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/Moxie.xap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/ar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/az.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/be_BY.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/bg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/bs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/cs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/cy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/da.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/el.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/et.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/fa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/fi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/he.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/hr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/hy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/id.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/ja.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/ka.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/kk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/km.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/ko.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/ku_IQ.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/lt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/lv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/ms.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/pt_BR.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/ro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/sq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/sr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/sv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/th_TH.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/uk_UA.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/vi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/zh_CN.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/i18n/zh_TW.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/jquery.plupload.queue/css/jquery.plupload.queue.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/jquery.plupload.queue/img/backgrounds.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/jquery.plupload.queue/img/buttons-disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/jquery.plupload.queue/img/buttons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/jquery.plupload.queue/img/delete.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/jquery.plupload.queue/img/done.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/jquery.plupload.queue/img/error.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/jquery.plupload.queue/img/throbber.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/jquery.plupload.queue/img/transp50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/jquery.plupload.queue/jquery.plupload.queue.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/jquery.plupload.queue/jquery.plupload.queue.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/jquery.ui.plupload/css/jquery.ui.plupload.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/jquery.ui.plupload/img/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/jquery.ui.plupload/img/plupload.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/jquery.ui.plupload/jquery.ui.plupload.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/jquery.ui.plupload/jquery.ui.plupload.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/moxie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/moxie.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/plupload.dev.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/plupload.full.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/plupload/plupload.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/qiniu.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/relation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/report_data.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/report_data_network_drama_month.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/report_data_network_drama_week.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/report_data_network_movie_week.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/report_data_network_variety_month.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/report_data_network_variety_week.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/respond.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/segment_dictionary.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/show.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/show.red.index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/show_find.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/show_inherit_relation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/show_log.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/show_log_time.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/show_log_time_exact.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/supersized-init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/supersized.3.2.7.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/toastr.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/total_comment.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/transition.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/tv_station.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/vue.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/wechat.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/wechat_ad.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yy-eth-contract/src/main/resources/static/js/yiren_gold_billboard.js" afterPath="" />
+    </list>
     <ignored path="$PROJECT_DIR$/yy-eth-contract/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -11,95 +191,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="HelloWordService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yy-eth-contract/src/main/java/com/dapp/service/HelloWordService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yy-eth-contract/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="45" column="47" lean-forward="false" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="truffle-config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yy-eth-contract/src/main/resources/srv-conf/truffle-config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="truffle.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yy-eth-contract/src/main/resources/srv-conf/truffle.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application-dev.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yy-eth-contract/src/main/resources/application-dev.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MvcConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yy-eth-contract/src/main/java/com/dapp/config/MvcConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yy-eth-contract/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="60" lean-forward="true" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
-              <folding>
-                <element signature="e#9822#9826#0" expanded="true" />
-                <element signature="e#9832#9836#0" expanded="true" />
-                <element signature="e#9915#9919#0" expanded="true" />
-                <element signature="e#9925#9929#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -336,54 +428,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="solidity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="solidity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.web3j:core:3.2.0" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="solidity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.web3j:core:3.2.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="core-3.2.0.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="solidity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.web3j:core:3.2.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="core-3.2.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="web3j" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="solidity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.web3j:core:3.2.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="core-3.2.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="web3j" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="solidity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.web3j:crypto:3.2.0" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="solidity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.web3j:crypto:3.2.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="crypto-3.2.0.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="solidity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.web3j:crypto:3.2.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="crypto-3.2.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="crypto" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -564,16 +608,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517306172724</updated>
-      <workItem from="1517306177771" duration="13510000" />
+      <workItem from="1517306177771" duration="13926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13510000" />
+    <option name="totallyTimeSpent" value="13926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -589,7 +632,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26009694" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26009694" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -900,29 +943,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yy-eth-contract/src/main/resources/application-dev.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yy-eth-contract/src/main/java/com/dapp/contract/dapp/HelloWord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yy-eth-contract/src/main/java/com/dapp/service/HelloWordService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -934,42 +959,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yy-eth-contract/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="45" column="47" lean-forward="false" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yy-eth-contract/src/main/resources/srv-conf/truffle-config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yy-eth-contract/src/main/resources/srv-conf/truffle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yy-eth-contract/src/main/java/com/dapp/contract/HelloWord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yy-eth-contract/src/main/java/com/dapp/config/MvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1022,23 +1015,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yy-eth-contract/.gitignore">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="120">
+          <caret line="8" column="54" lean-forward="true" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/yy-eth-contract/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yy-eth-contract/src/main/java/com/dapp/config/MvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yy-eth-contract/src/main/resources/application-dev.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="40" lean-forward="true" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yy-eth-contract/src/main/resources/srv-conf/truffle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="47" lean-forward="true" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yy-eth-contract/src/main/resources/srv-conf/truffle-config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="60" lean-forward="true" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yy-eth-contract/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="73" column="21" lean-forward="true" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yy-eth-contract/src/main/java/com/dapp/service/HelloWordService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
           <folding>
-            <element signature="e#9822#9826#0" expanded="true" />
-            <element signature="e#9832#9836#0" expanded="true" />
-            <element signature="e#9915#9919#0" expanded="true" />
-            <element signature="e#9925#9929#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
