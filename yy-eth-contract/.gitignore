@@ -1,0 +1,33 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+/target/
+
+# eclipse
+.classpath
+.project
+.settings
+
+# idea
+.idea
+.idea/*
+*.iml
+*.ipr
+*.iws
+
+# mac
+.DS_Store
+
+# revision
+revision
+
+# env
+application-dev.properties
+
+# ansible
+*.retry
+*.local
+
