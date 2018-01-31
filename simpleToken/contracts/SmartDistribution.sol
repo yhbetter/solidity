@@ -44,7 +44,7 @@ contract SmartDistribution {
     }
 
     function claim(Token token) public {
-        this.claimTo(token, msg.sender);
+        claimTo(token, msg.sender);
     }
 
     function claimTo(Token token, address ads) public {
@@ -66,10 +66,9 @@ contract SmartDistribution {
     }
 
     function claimAll() public {
-
         for (uint i = 0; i < addressList.length; i++) {
             for (uint j = 0; j < supportTokens.length; j++) {
-                this.claimTo(supportTokens[j],addressList[i]);
+                claimTo(supportTokens[j],addressList[i]);
             }
         }
 
