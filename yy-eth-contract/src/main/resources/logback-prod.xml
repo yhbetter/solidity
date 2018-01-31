@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+    
+    <property name="PROJECT_NAME" value="oneportal" />
+    <property name="LOG_FILE" value="${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}}/${PROJECT_NAME}.log"/>
+    <property name="JSON_LOG_FILE" value="${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}}/${PROJECT_NAME}-json.log"/>
+    
+    <appender name="main_log_file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder charset="UTF-8">
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+        </encoder>
+        <file>${LOG_FILE}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_FILE}.%d{yyyyMMdd}.gz</fileNamePattern>
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+    </appender>
+    
+    <appender name="json_log_file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder charset="UTF-8">
+            <pattern>%m%n</pattern>
+        </encoder>
+        <file>${JSON_LOG_FILE}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${JSON_LOG_FILE}.%d{yyyyMMdd}.gz</fileNamePattern>
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+    </appender>
+    
+    <logger name="json_logger" additivity="false">
+        <level value="info" />
+        <appender-ref ref="json_log_file" />
+    </logger>
+    
+    <logger name="com.guduo.oneportal" additivity="false">
+        <level value="info" />
+        <appender-ref ref="main_log_file" />
+    </logger>
+    
+    <root level="INFO">
+        <appender-ref ref="main_log_file" />
+    </root>
+</configuration>
