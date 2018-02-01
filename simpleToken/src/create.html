@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>创建合约</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="js/vue.js"></script>
+
+    <script type="text/javascript" src="js/web3.min.js"></script>
+    <script type="text/javascript" src="js/web3Util.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+</head>
+<body>
+<div class="container">
+    <header class="navbar navbar-static-top bs-docs-nav" id="top">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar"
+                        aria-controls="bs-navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../" class="navbar-brand">blockapp</a>
+            </div>
+        </div>
+    </header>
+    <div class="bs-docs-header" id="content" tabindex="-1" style="margin-bottom: 100px;">
+        <div class="container">
+            <h1>创建合约</h1>
+            <p>输入地址和期权数，生成你的智能合约</p>
+        </div>
+    </div>
+    <div id="app">
+        <button type="button" class="btn btn-primary" @click="add">添加</button>
+        <button type="button" class="btn btn-primary" @click="create">创建</button>
+        <table class="table">
+            <thead>
+            <td>地址</td>
+            <td>期权</td>
+            </thead>
+            <tbody>
+            <tr v-for="address in addressList">
+                <td><input type="text" v-model="address.address" value="1"/></td>
+                <td><input type="text"  v-model="address.balance"  value="1"/></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script type="application/javascript">
+
+
+
+        var SmartDistribution;
+
+        var bytecode  ;
+        $.getJSON("abi/SmartDistribution.json",function (smartAbi) {
+            SmartDistribution= web3.eth.contract(smartAbi['abi']);
+            bytecode = smartAbi['bytecode'];
+        });
+        new Vue({
+            el: "#app",
+            data:{
+                addressList:[{address:0,balance:0}]
+            },
+            methods:{
+                add:function () {
+                    this.addressList.push({address:0,balance:0});
+                },
+                create:function () {
+                    var addList = [];
+                    var balList = [];
+                    var i ;
+                    for(i in this.addressList){
+                        addList.push(this.addressList[i].address);
+                        balList.push(this.addressList[i].balance);
+                    }
+                    web3.eth.estimateGas({data: bytecode},function (a,b) {
+                        alert(a);
+                        alert(b);
+
+                    });
+//                    var contractInstance = SmartDistribution.new( addList,balList,{ data:bytecode,from: web3.eth.coinbase, gas: 1000000}, function(err, myContract) {
+//                        alert(err);
+//                        console.log(err);
+//                        console.log(myContract);
+//
+//                    });
+                }
+            }
+        });
+
+    </script>
+</div>
+</body>
+</html>
