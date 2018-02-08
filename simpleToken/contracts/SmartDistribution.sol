@@ -1,8 +1,10 @@
 pragma solidity ^0.4.17;
 
-import "./Token.sol";
+import "./token/Token.sol";
+import "./interface/Version.sol";
+import "./library/features.sol";
 
-contract SmartDistribution {
+contract SmartDistribution is Version ,owned{
 
     //地址期权余额
     mapping(address => uint256) public balance;
@@ -16,8 +18,10 @@ contract SmartDistribution {
     mapping(address => TokenBalance) public tokenBalance;
 
 
+
     //地址期权余额
     mapping(address => mapping(address => uint256)) public alreadSendBalance;
+    mapping(address => mapping(address => uint256)) public distrBalance;
 
     struct TokenBalance {
         uint256 total;
@@ -34,12 +38,26 @@ contract SmartDistribution {
         addressList = _as;
     }
 
-    function support(Token t) public returns(bool) {
+
+    function blockVersion() constant public returns (string version){
+        version="distr.0.1";
+    }
+
+
+    function support(Token t) public returns (bool) {
         TokenBalance storage bal = tokenBalance[t];
         uint256 nowBalance = t.balanceOf(this);
+        if(nowBalance == bal.balance){
+            return false;
+        }
+        uint256 received = nowBalance - bal.balance;
         bal.total = bal.total + nowBalance - bal.balance;
-
         supportTokens.push(t);
+
+        for (uint i = 0; i < addressList.length; i++) {
+            address ads = addressList[i];
+            distrBalance[t][ads] = alreadSendBalance[t][ads]+((received*balance[ads])/totalSupply);
+        }
         return true;
     }
 
@@ -49,12 +67,11 @@ contract SmartDistribution {
 
     function claimTo(Token token, address ads) public {
         require(balance[ads] > 0);
-        TokenBalance storage bal = tokenBalance[token];
-        uint256 alreadSend = alreadSendBalance[token][ads];
-        uint256 val = ((balance[ads] * bal.total)/ totalSupply)  - alreadSend;
+        uint256 distr = distrBalance[token][ads];
+        uint256 alredSend = alreadSendBalance[token][ads];
+        uint256 val = distr-alredSend;
         require(val > 0);
-        token.transfer(ads, val);
-        alreadSendBalance[token][ads] = alreadSend + val;
+        token.transfer(ads,val);
 
     }
 
@@ -68,7 +85,7 @@ contract SmartDistribution {
     function claimAll() public {
         for (uint i = 0; i < addressList.length; i++) {
             for (uint j = 0; j < supportTokens.length; j++) {
-                claimTo(supportTokens[j],addressList[i]);
+                claimTo(supportTokens[j], addressList[i]);
             }
         }
 

@@ -11,6 +11,7 @@
 
     <script type="text/javascript" src="js/web3.min.js"></script>
     <script type="text/javascript" src="js/web3Util.js"></script>
+    <script type="text/javascript" src="js/contract.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 </head>
 <body>
@@ -46,54 +47,60 @@
             <tbody>
             <tr v-for="address in addressList">
                 <td><input type="text" v-model="address.address" value="1"/></td>
-                <td><input type="text"  v-model="address.balance"  value="1"/></td>
+                <td><input type="text" v-model="address.balance" value="1"/></td>
             </tr>
             </tbody>
         </table>
     </div>
 
     <script type="application/javascript">
-
-
-
+        var we = require("../contract");
         var SmartDistribution;
 
-        var bytecode  ;
-        $.getJSON("abi/SmartDistribution.json",function (smartAbi) {
-            SmartDistribution= web3.eth.contract(smartAbi['abi']);
-            bytecode = smartAbi['bytecode'];
+        var bytecode;
+        $.getJSON("abi/SmartDistribution.json", function (smartAbi) {
+            SmartDistribution = web3.eth.contract(smartAbi['abi']);
+            bytecode = smartAbi['byte'];
         });
+        var contractInstance;
         new Vue({
             el: "#app",
-            data:{
-                addressList:[{address:0,balance:0}]
+            data: {
+                addressList: [{address: 0, balance: 0}]
             },
-            methods:{
-                add:function () {
-                    this.addressList.push({address:0,balance:0});
+            methods: {
+                add: function () {
+                    this.addressList.push({address: 0, balance: 0});
                 },
-                create:function () {
+                create: function () {
                     var addList = [];
                     var balList = [];
-                    var i ;
-                    for(i in this.addressList){
+                    var i;
+                    for (i in this.addressList) {
                         addList.push(this.addressList[i].address);
                         balList.push(this.addressList[i].balance);
                     }
-                    web3.eth.estimateGas({data: bytecode},function (a,b) {
-                        alert(a);
-                        alert(b);
+                    web3.eth.estimateGas({data: bytecode}, function (a, gas) {
+                        console.log(a)
+                        if (!a) {
+                            contractInstance = SmartDistribution.new(addList, balList, {
+                                data: bytecode,
+                                from: web3.eth.coinbase,
+                                gas: 1000000
+                            }, function (err, myContract) {
+                                console.log(err);
+                                console.log(myContract);
+                            });
+
+                        } else {
+                            alert(a);
+                        }
 
                     });
-//                    var contractInstance = SmartDistribution.new( addList,balList,{ data:bytecode,from: web3.eth.coinbase, gas: 1000000}, function(err, myContract) {
-//                        alert(err);
-//                        console.log(err);
-//                        console.log(myContract);
-//
-//                    });
                 }
             }
-        });
+        })
+        ;
 
     </script>
 </div>
