@@ -1,8 +1,8 @@
 pragma solidity ^0.4.17;
 
-import "./token/Token.sol";
-import "./interface/Version.sol";
-import "./library/features.sol";
+import "./Token.sol";
+import "./Version.sol";
+import "./owned.sol";
 
 contract SmartDistribution is Version ,owned{
 
@@ -10,6 +10,8 @@ contract SmartDistribution is Version ,owned{
     mapping(address => uint256) public balance;
     //所有地址集合
     address[] public addressList;
+    uint256 public addressCount;
+
     //期权总数
     uint256 public totalSupply;
     //支付的所有token
@@ -36,6 +38,7 @@ contract SmartDistribution is Version ,owned{
             totalSupply += _bs[i];
         }
         addressList = _as;
+        addressCount = _as.length;
     }
 
 
@@ -52,7 +55,15 @@ contract SmartDistribution is Version ,owned{
         }
         uint256 received = nowBalance - bal.balance;
         bal.total = bal.total + nowBalance - bal.balance;
-        supportTokens.push(t);
+        bool exists = false;
+        for (uint j = 0; j < supportTokens.length; j++) {
+            if(t == supportTokens[j]){
+              exists = true;
+            }
+        }
+        if(!exists){
+            supportTokens.push(t);
+        }
 
         for (uint i = 0; i < addressList.length; i++) {
             address ads = addressList[i];
@@ -71,7 +82,10 @@ contract SmartDistribution is Version ,owned{
         uint256 alredSend = alreadSendBalance[token][ads];
         uint256 val = distr-alredSend;
         require(val > 0);
-        token.transfer(ads,val);
+        bool success = token.transfer(ads,val);
+        if(success){
+           alreadSendBalance[token][ads]=distr;
+        }
 
     }
 

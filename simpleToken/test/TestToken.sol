@@ -73,6 +73,19 @@ contract TestToken {
         }
 
 
+        function testCount() public  {
+            smart = new SmartDistribution(aList, uList);
+
+            Assert.equal(smart.addressCount(), aList.length, "count error ");
+            smart.support(token);
+            /* smart.supportTokens(0); */
+        /*      Assert.equal(smart.supportTokens(0),token, "count  2 error ");
+             smart.support(token);
+
+            Assert.equal(smart.supportTokens(1),token, "count  3 error "); */
+        }
+
+
 //    function testAll() public {
 //
 //

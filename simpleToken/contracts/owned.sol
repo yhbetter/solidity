@@ -8,10 +8,8 @@ contract owned {
         if (msg.sender == owner)
             _;
     }
-    function isMaster() public constant returns(bool){
-        return msg.sender == owner;
+    function isMaster(address sen) public constant returns(bool){
+        return sen == owner;
     }
     address owner;
 }
-
-
