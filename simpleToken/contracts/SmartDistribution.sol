@@ -25,6 +25,13 @@ contract SmartDistribution is Version ,owned{
     mapping(address => mapping(address => uint256)) public alreadSendBalance;
     mapping(address => mapping(address => uint256)) public distrBalance;
 
+    event Claimed(
+            address indexed _from,
+            address indexed _token,
+            uint256 _value
+        );
+
+
     struct TokenBalance {
         uint256 total;
         uint256 balance;
@@ -55,6 +62,7 @@ contract SmartDistribution is Version ,owned{
         }
         uint256 received = nowBalance - bal.balance;
         bal.total = bal.total + nowBalance - bal.balance;
+        bal.balance = nowBalance;
         bool exists = false;
         for (uint j = 0; j < supportTokens.length; j++) {
             if(t == supportTokens[j]){
@@ -85,22 +93,28 @@ contract SmartDistribution is Version ,owned{
         bool success = token.transfer(ads,val);
         if(success){
            alreadSendBalance[token][ads]=distr;
+
+           TokenBalance storage bal = tokenBalance[token];
+           bal.balance-=val;
+           Claimed(ads,token,val);
         }
 
     }
 
 
     function() payable public {
-        for (uint i = 0; i < supportTokens.length; i++) {
-            claim(supportTokens[i]);
-        }
+      claimImpl();
     }
 
-    function claimAll() public {
+    function claimImpl() public{
+      for (uint i = 0; i < supportTokens.length; i++) {
+          claim(supportTokens[i]);
+      }
+    }
+
+    function claimAll(Token token) payable public {
         for (uint i = 0; i < addressList.length; i++) {
-            for (uint j = 0; j < supportTokens.length; j++) {
-                claimTo(supportTokens[j], addressList[i]);
-            }
+            claimTo(token, addressList[i]);
         }
 
     }

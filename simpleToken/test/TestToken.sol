@@ -56,6 +56,8 @@ contract TestToken {
             smart.support(token);
 
 
+
+
             smart.claimTo(token, ad2);
             smartBal = token.balanceOf(smart);
             Assert.equal(smartBal, 1000000, "smart 2 balance error ");
@@ -70,6 +72,13 @@ contract TestToken {
 
             ad1Bal = token.balanceOf(ad1);
             Assert.equal(ad1Bal, 99999998000000, "address 1 balance error ");
+
+
+            uint256 t;
+            uint256 b;
+            (t,b) = smart.tokenBalance(token);
+
+            Assert.equal(b, 0, "aaa");
         }
 
 
