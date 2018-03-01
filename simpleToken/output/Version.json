@@ -1,0 +1,149 @@
+{
+  "contractName": "Version",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "blockVersion",
+      "outputs": [
+        {
+          "name": "version",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.17;\n\n\ninterface Version {\n\n\n    function blockVersion() constant  public returns (string version);\n\n\n}\n",
+  "sourcePath": "/Users/yanghang/Workspace/eth/workspace/solidity/simpleToken/contracts/Version.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/yanghang/Workspace/eth/workspace/solidity/simpleToken/contracts/Version.sol",
+      "exportedSymbols": {
+        "Version": [
+          1170
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".17"
+          ]
+        },
+        "id": 1164,
+        "name": "PragmaDirective",
+        "src": "0:24:6"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            1170
+          ],
+          "name": "Version",
+          "scope": 1171
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "constant": true,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "blockVersion",
+              "payable": false,
+              "scope": 1170,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1165,
+                "name": "ParameterList",
+                "src": "74:2:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "version",
+                      "scope": 1169,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 1166,
+                        "name": "ElementaryTypeName",
+                        "src": "103:6:6"
+                      }
+                    ],
+                    "id": 1167,
+                    "name": "VariableDeclaration",
+                    "src": "103:14:6"
+                  }
+                ],
+                "id": 1168,
+                "name": "ParameterList",
+                "src": "102:16:6"
+              }
+            ],
+            "id": 1169,
+            "name": "FunctionDefinition",
+            "src": "53:66:6"
+          }
+        ],
+        "id": 1170,
+        "name": "ContractDefinition",
+        "src": "27:96:6"
+      }
+    ],
+    "id": 1171,
+    "name": "SourceUnit",
+    "src": "0:124:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-26T12:03:03.716Z"
+}

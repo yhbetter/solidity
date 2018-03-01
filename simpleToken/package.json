@@ -1,0 +1,19 @@
+{
+  "name": "simpleToken",
+  "version": "1.0.0",
+  "description": "####简单的erc20Token",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "truffle-hdwallet-provider": "0.0.3",
+    "zeppelin-solidity": "1.7.0"
+  }
+}

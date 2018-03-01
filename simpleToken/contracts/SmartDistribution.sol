@@ -1,10 +1,11 @@
 pragma solidity ^0.4.17;
 
 import "./Token.sol";
-import "./Version.sol";
-import "./owned.sol";
+import "./utils/Version.sol";
+import "./utils/HasNoEth.sol";
+import 'zeppelin-solidity/contracts/ownership/HasNoTokens.sol';
 
-contract SmartDistribution is Version ,owned{
+contract SmartDistribution is Version ,HasNoTokens,HasNoEth{
 
     //地址期权余额
     mapping(address => uint256) public balance;
@@ -54,7 +55,7 @@ contract SmartDistribution is Version ,owned{
     }
 
 
-    function support(Token t) public returns (bool) {
+    function support(Token t) public onlyOwner returns (bool) {
         TokenBalance storage bal = tokenBalance[t];
         uint256 nowBalance = t.balanceOf(this);
         if(nowBalance == bal.balance){

@@ -27,7 +27,7 @@
       "absolutePath": "/Users/yanghang/Workspace/eth/workspace/solidity/simpleToken/contracts/Version.sol",
       "exportedSymbols": {
         "Version": [
-          483
+          1173
         ]
       }
     },
@@ -41,9 +41,9 @@
             ".17"
           ]
         },
-        "id": 477,
+        "id": 1167,
         "name": "PragmaDirective",
-        "src": "0:24:2"
+        "src": "0:24:6"
       },
       {
         "attributes": {
@@ -57,10 +57,10 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            483
+            1173
           ],
           "name": "Version",
-          "scope": 484
+          "scope": 1174
         },
         "children": [
           {
@@ -74,7 +74,7 @@
               ],
               "name": "blockVersion",
               "payable": false,
-              "scope": 483,
+              "scope": 1173,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
@@ -87,9 +87,9 @@
                   ]
                 },
                 "children": [],
-                "id": 478,
+                "id": 1168,
                 "name": "ParameterList",
-                "src": "74:2:2"
+                "src": "74:2:6"
               },
               {
                 "children": [
@@ -97,7 +97,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "version",
-                      "scope": 482,
+                      "scope": 1172,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "string memory",
@@ -110,34 +110,34 @@
                           "name": "string",
                           "type": "string storage pointer"
                         },
-                        "id": 479,
+                        "id": 1169,
                         "name": "ElementaryTypeName",
-                        "src": "103:6:2"
+                        "src": "103:6:6"
                       }
                     ],
-                    "id": 480,
+                    "id": 1170,
                     "name": "VariableDeclaration",
-                    "src": "103:14:2"
+                    "src": "103:14:6"
                   }
                 ],
-                "id": 481,
+                "id": 1171,
                 "name": "ParameterList",
-                "src": "102:16:2"
+                "src": "102:16:6"
               }
             ],
-            "id": 482,
+            "id": 1172,
             "name": "FunctionDefinition",
-            "src": "53:66:2"
+            "src": "53:66:6"
           }
         ],
-        "id": 483,
+        "id": 1173,
         "name": "ContractDefinition",
-        "src": "27:96:2"
+        "src": "27:96:6"
       }
     ],
-    "id": 484,
+    "id": 1174,
     "name": "SourceUnit",
-    "src": "0:124:2"
+    "src": "0:124:6"
   },
   "compiler": {
     "name": "solc",
@@ -145,5 +145,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-02-24T10:19:48.853Z"
+  "updatedAt": "2018-02-27T12:26:00.726Z"
 }
