@@ -21,13 +21,13 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.4.17;\n\n\ninterface Version {\n\n\n    function blockVersion() constant  public returns (string version);\n\n\n}\n",
-  "sourcePath": "/Users/yanghang/Workspace/eth/workspace/solidity/simpleToken/contracts/Version.sol",
+  "sourcePath": "/Users/yanghang/Workspace/eth/workspace/solidity/simpleToken/contracts/utils/Version.sol",
   "ast": {
     "attributes": {
-      "absolutePath": "/Users/yanghang/Workspace/eth/workspace/solidity/simpleToken/contracts/Version.sol",
+      "absolutePath": "/Users/yanghang/Workspace/eth/workspace/solidity/simpleToken/contracts/utils/Version.sol",
       "exportedSymbols": {
         "Version": [
-          1173
+          285
         ]
       }
     },
@@ -41,9 +41,9 @@
             ".17"
           ]
         },
-        "id": 1167,
+        "id": 279,
         "name": "PragmaDirective",
-        "src": "0:24:6"
+        "src": "0:24:3"
       },
       {
         "attributes": {
@@ -57,10 +57,10 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            1173
+            285
           ],
           "name": "Version",
-          "scope": 1174
+          "scope": 286
         },
         "children": [
           {
@@ -74,7 +74,7 @@
               ],
               "name": "blockVersion",
               "payable": false,
-              "scope": 1173,
+              "scope": 285,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
@@ -87,9 +87,9 @@
                   ]
                 },
                 "children": [],
-                "id": 1168,
+                "id": 280,
                 "name": "ParameterList",
-                "src": "74:2:6"
+                "src": "74:2:3"
               },
               {
                 "children": [
@@ -97,7 +97,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "version",
-                      "scope": 1172,
+                      "scope": 284,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "string memory",
@@ -110,34 +110,34 @@
                           "name": "string",
                           "type": "string storage pointer"
                         },
-                        "id": 1169,
+                        "id": 281,
                         "name": "ElementaryTypeName",
-                        "src": "103:6:6"
+                        "src": "103:6:3"
                       }
                     ],
-                    "id": 1170,
+                    "id": 282,
                     "name": "VariableDeclaration",
-                    "src": "103:14:6"
+                    "src": "103:14:3"
                   }
                 ],
-                "id": 1171,
+                "id": 283,
                 "name": "ParameterList",
-                "src": "102:16:6"
+                "src": "102:16:3"
               }
             ],
-            "id": 1172,
+            "id": 284,
             "name": "FunctionDefinition",
-            "src": "53:66:6"
+            "src": "53:66:3"
           }
         ],
-        "id": 1173,
+        "id": 285,
         "name": "ContractDefinition",
-        "src": "27:96:6"
+        "src": "27:96:3"
       }
     ],
-    "id": 1174,
+    "id": 286,
     "name": "SourceUnit",
-    "src": "0:124:6"
+    "src": "0:124:3"
   },
   "compiler": {
     "name": "solc",
@@ -145,5 +145,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-02-27T12:26:00.726Z"
+  "updatedAt": "2018-03-13T15:15:10.617Z"
 }

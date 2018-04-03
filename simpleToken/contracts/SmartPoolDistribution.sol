@@ -1,7 +1,7 @@
 pragma solidity ^0.4.17;
 
 import "./Token.sol";
-import "./Version.sol";
+import "./utils/Version.sol";
 import "./owned.sol";
 
 

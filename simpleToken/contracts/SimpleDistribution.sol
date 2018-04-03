@@ -14,13 +14,20 @@ contract SimpleDistribution is Version,BlockRecharge ,HasNoTokens,HasNoEth{
 
 
 
-    event Claimed(
+    event Distr(
+        address indexed _to,
+        address indexed _token,
+        uint256 _value
+    );
+
+
+    event Fee(
         address indexed _from,
         address indexed _token,
         uint256 _value
     );
 
-    function SimpleDistribution() {
+    function SimpleDistribution() public {
 
     }
 
@@ -48,15 +55,17 @@ contract SimpleDistribution is Version,BlockRecharge ,HasNoTokens,HasNoEth{
           //收费
           uint256 rate = calcRate(totalSupply);
           if(rate > 0){
-            token.safeTransferFrom(msg.sender,ads,sendVal);
+            token.safeTransferFrom(msg.sender,ads,rate);
             totalSupply = totalSupply - rate;
+            Fee(msg.sender,token,rate);
           }
 
 
-          for (uint i = 0; i < _as.length; i++) {
-              address ads = _as[i];
-              var sendVal = (allowance * _bs[i])/totalSupply;
+          for (uint j = 0; j < _as.length; j++) {
+              address ads = _as[j];
+              uint256 sendVal = (allowance * _bs[j])/totalSupply;
               token.safeTransferFrom(msg.sender,ads,sendVal);
+              Distr(ads,token,sendVal);
           }
           return true;
     }

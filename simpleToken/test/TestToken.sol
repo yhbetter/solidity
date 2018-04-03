@@ -25,9 +25,9 @@ contract TestToken {
 
     function beforeAll() public {
 
-        token = new HumanStandardToken(100000000000000, "AS ANGEL", 8, "ASA");
+        token = new HumanStandardToken(1000000, "AS ANGEL", 0, "ASA");
         ad1 = address(this);
-        ad2 = address(0x9EfB529008d4E10AB0E57Dea9B6a573990c25085);
+        ad2 = address(0x3c33Eb8A1783d84f46c3510d056120187d55F1bf);
 
         aList = new address[](2);
         aList[0] = ad1;
@@ -38,7 +38,7 @@ contract TestToken {
     }
 
 
-        function testSmart() public {
+        /* function testSmart() public {
 
 
             uint256 bal = token.balanceOf(ad1);
@@ -87,12 +87,12 @@ contract TestToken {
 
             Assert.equal(smart.addressCount(), aList.length, "count error ");
             smart.support(token);
-            /* smart.supportTokens(0); */
-        /*      Assert.equal(smart.supportTokens(0),token, "count  2 error ");
+            smart.supportTokens(0); 
+              Assert.equal(smart.supportTokens(0),token, "count  2 error ");
              smart.support(token);
 
-            Assert.equal(smart.supportTokens(1),token, "count  3 error "); */
-        }
+            Assert.equal(smart.supportTokens(1),token, "count  3 error ");
+        } */
 
 
 //    function testAll() public {

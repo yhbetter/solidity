@@ -6,7 +6,7 @@ contract BlockRecharge is Ownable {
 
   uint256 rate;
 
-  function BlockRecharge() {
+  function BlockRecharge() public{
       rate = 0;
   }
 
@@ -15,7 +15,7 @@ contract BlockRecharge is Ownable {
   }
 
 
-  function calcRate(uint256 amount) internal onlyOwner returns(uint256 val) {
+  function calcRate(uint256 amount) internal view onlyOwner returns(uint256 val) {
       require(amount > 0);
       val =  (amount * rate ) / 1000;
   }
