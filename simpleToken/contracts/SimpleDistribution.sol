@@ -6,6 +6,7 @@ import "./utils/BlockRecharge.sol";
 import 'zeppelin-solidity/contracts/ownership/HasNoTokens.sol';
 import "zeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 import "zeppelin-solidity/contracts/token/ERC20/SafeERC20.sol";
+import "zeppelin-solidity/contracts/math/SafeMath.sol";
 
 contract SimpleDistribution is Version,BlockRecharge ,HasNoTokens,HasNoEth{
 
@@ -63,7 +64,9 @@ contract SimpleDistribution is Version,BlockRecharge ,HasNoTokens,HasNoEth{
 
           for (uint j = 0; j < _as.length; j++) {
               address ads = _as[j];
-              uint256 sendVal = (allowance * _bs[j])/totalSupply;
+              uint256 v1 = SafeMath.div(allowance,totalSupply);
+              uint256 sendVal =SafeMath.mul(v1,_bs[j]);
+              /* uint256 sendVal = ((allowance) * _bs[j])/totalSupply; */
               token.safeTransferFrom(msg.sender,ads,sendVal);
               Distr(ads,token,sendVal);
           }
