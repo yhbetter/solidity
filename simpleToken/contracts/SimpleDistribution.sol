@@ -21,6 +21,10 @@ contract SimpleDistribution is Version,BlockRecharge ,HasNoTokens,HasNoEth{
         uint256 _value
     );
 
+        event DistrEth(
+            address indexed _to,
+            uint256 _value
+        );
 
     event Fee(
         address indexed _from,
@@ -36,7 +40,6 @@ contract SimpleDistribution is Version,BlockRecharge ,HasNoTokens,HasNoEth{
           version = "sDistr.0.1";
     }
 
-
     function distribution(address[] _as, uint256[] _bs,ERC20 token) public returns(bool) {
           require(_as.length > 0);
           require(_as.length == _bs.length);
@@ -48,30 +51,56 @@ contract SimpleDistribution is Version,BlockRecharge ,HasNoTokens,HasNoEth{
           for (uint i = 0; i < _as.length; i++) {
               totalSupply += _bs[i];
           }
-          if(totalSupply <= 0){
+          if(totalSupply != allowance){
               return false;
-          }
-
-
-          //收费
-          uint256 rate = calcRate(totalSupply);
-          if(rate > 0){
-            token.safeTransferFrom(msg.sender,ads,rate);
-            totalSupply = totalSupply - rate;
-            Fee(msg.sender,token,rate);
           }
 
 
           for (uint j = 0; j < _as.length; j++) {
               address ads = _as[j];
-              uint256 v1 = SafeMath.div(allowance,totalSupply);
-              uint256 sendVal =SafeMath.mul(v1,_bs[j]);
-              /* uint256 sendVal = ((allowance) * _bs[j])/totalSupply; */
+              uint256 sendVal =_bs[j];
               token.safeTransferFrom(msg.sender,ads,sendVal);
               Distr(ads,token,sendVal);
           }
           return true;
     }
+
+        function distributionToken(address[] _as, uint256[] _bs,ERC20 token) public returns(bool) {
+              require(_as.length > 0);
+              require(_as.length == _bs.length);
+              for (uint j = 0; j < _as.length; j++) {
+                  address ads = _as[j];
+                  uint256 sendVal =_bs[j];
+                  token.safeTransfer(ads,sendVal);
+              }
+              return true;
+        }
+
+
+
+        function distributionEth(address[] _as, uint256[] _bs) public payable returns(bool) {
+              require(_as.length > 0);
+              require(_as.length == _bs.length);
+              uint256 allowance =  msg.value;
+              if(allowance <= 0){
+                  return false;
+              }
+              uint256 totalSupply = 0;
+              for (uint i = 0; i < _as.length; i++) {
+                  totalSupply += _bs[i];
+              }
+              if(totalSupply != totalSupply){
+                  return false;
+              }
+
+              for (uint j = 0; j < _as.length; j++) {
+                  address ads = _as[j];
+                  uint256 sendVal =_bs[j];
+                  ads.transfer(sendVal);
+                  DistrEth(ads,sendVal);
+              }
+              return true;
+        }
 
 
 

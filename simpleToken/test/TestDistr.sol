@@ -7,7 +7,7 @@ import "../contracts/SimpleDistribution.sol";
 
 contract TestDistr {
 
-      SimpleDistribution simple;
+      /* SimpleDistribution simple;
       HumanStandardToken token;
       address ad1;
       address ad2;
@@ -18,7 +18,7 @@ contract TestDistr {
 
               simple = new SimpleDistribution();
               token = new HumanStandardToken(1000000, "AS ANGEL", 0, "ASA");
-              /* this = TestDistr(0x3c33Eb8A1783d84f46c3510d056120187d55F1bf); */
+              // this = TestDistr(0x3c33Eb8A1783d84f46c3510d056120187d55F1bf); 
               ad1 = address(0x3c33Eb8A1783d84f46c3510d056120187d55F1bf);
               ad2 = address(0x3c33Eb8A1783d84f46c3510d056120187d55F1bf);
 
@@ -40,6 +40,6 @@ contract TestDistr {
 
               Assert.equal(bal, 201, "address 1 balance error ");
 
-          }
+          } */
 
 }

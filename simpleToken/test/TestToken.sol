@@ -6,7 +6,7 @@ import "../contracts/HumanStandardToken.sol";
 import "../contracts/SmartDistribution.sol";
 
 contract TestToken {
-    SmartDistribution smart;
+    /* SmartDistribution smart;
     HumanStandardToken token;
     address ad1;
     address ad2;
@@ -35,7 +35,7 @@ contract TestToken {
         uList = new uint256[](2);
         uList[0] = 10;
         uList[1] = 20;
-    }
+    } */
 
 
         /* function testSmart() public {
@@ -87,7 +87,7 @@ contract TestToken {
 
             Assert.equal(smart.addressCount(), aList.length, "count error ");
             smart.support(token);
-            smart.supportTokens(0); 
+            smart.supportTokens(0);
               Assert.equal(smart.supportTokens(0),token, "count  2 error ");
              smart.support(token);
 
