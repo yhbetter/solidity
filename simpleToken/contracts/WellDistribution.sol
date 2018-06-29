@@ -2,13 +2,13 @@ pragma solidity ^0.4.17;
 
 import "./utils/Version.sol";
 import "./utils/HasNoEth.sol";
-import "./utils/BlockRecharge.sol";
+import "./utils/Registable.sol";
 import 'zeppelin-solidity/contracts/ownership/HasNoTokens.sol';
 import "zeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 import "zeppelin-solidity/contracts/token/ERC20/SafeERC20.sol";
 import "zeppelin-solidity/contracts/math/SafeMath.sol";
 
-contract WellDistribution is Version,BlockRecharge ,HasNoTokens,HasNoEth{
+contract WellDistribution is Version ,HasNoTokens,HasNoEth,Registable{
 
 
     using SafeERC20 for ERC20;
@@ -21,46 +21,56 @@ contract WellDistribution is Version,BlockRecharge ,HasNoTokens,HasNoEth{
         uint256 _value
     );
 
-    event invest(
+    event Invest(
       address indexed _to,
       uint256 _value
     );
-
 
     uint256 public amountLimit; //总金额限制
     uint256 public amountMinLimit;  //单人最小金额限制
     uint256 public amountMaxLimit;  //单人最大金额限制
     uint256 public totalSupply;
     bool public isFinish = false;
-    mapping (address => uint256) balances;
+    uint public startTime;
+    uint public endTime;
+    mapping(address => uint256) public balances;
 
 
-    function WellDistribution(uint256 _amountLimit,uint256 _amountMinLimit,uint256 _amountMaxLimit) public {
+
+    function WellDistribution(uint256 _amountLimit,
+      uint256 _amountMinLimit,
+      uint256 _amountMaxLimit,
+      uint _startTime,
+      uint _endTime,
+      ERC20 token_) public Registable(token_)  {
       amountLimit = _amountLimit;
       amountMinLimit = _amountMinLimit;
       amountMaxLimit = _amountMaxLimit;
+      endTime = _endTime;
+      startTime = _startTime;
     }
 
     function blockVersion() constant  public returns (string version){
-          version = "sDistr.0.1";
+          version = "wellDistr.1.0";
     }
 
 
-    function () payable public {
+    function () payable public onlyRegister {
         require(msg.value > 0);
-        bool valid = (msg.value< amountMinLimit || msg.value > amountMaxLimit );
+        uint now = time();
+        require(now > startTime && now < endTime);
+        bool valid = (msg.value< amountMinLimit || msg.value + balances[msg.sender] > amountMaxLimit );
         require(!valid);
         require(!isFinish);
         uint256 addBal = msg.value;
         totalSupply = totalSupply + addBal;
         require(totalSupply <=amountLimit);
         balances[msg.sender] += msg.value;
-        invest(msg.sender,msg.value);
+        Invest(msg.sender,msg.value);
 
         if(totalSupply == amountLimit){
           isFinish = true;
         }
-
     }
 
 
@@ -84,6 +94,42 @@ contract WellDistribution is Version,BlockRecharge ,HasNoTokens,HasNoEth{
           return true;
     }
 
+
+
+    function time() constant public returns (uint) {
+        return block.timestamp;
+    }
+
+    function updateFinish() public  onlyOwner  {
+        isFinish = true;
+    }
+
+    function updateStartTime( uint _startTime) public  onlyOwner  {
+        startTime = _startTime;
+    }
+
+
+    function updateEndTime( uint _endTime) public  onlyOwner  {
+        endTime = _endTime;
+        isFinish  = false;
+    }
+
+    function updateAmountLimit(uint256 _amount) public onlyOwner{
+        amountLimit = _amount;
+    }
+
+    function updateMaxLimit(uint256 _max) public onlyOwner{
+        amountMaxLimit = _max;
+    }
+
+    function updateMinLimit(uint256 _min) public onlyOwner{
+        amountMinLimit = _min;
+    }
+
+
+    function updateBalance(address _ow,uint256 _bal) public onlyOwner{
+        balances[_ow] = _bal;
+    }
 
 
 }

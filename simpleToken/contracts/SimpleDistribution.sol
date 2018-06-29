@@ -32,15 +32,21 @@ contract SimpleDistribution is Version,BlockRecharge ,HasNoTokens,HasNoEth{
         uint256 _value
     );
 
-    function SimpleDistribution() public {
+    ERC20 public verifier;
 
+
+    modifier isVerify { require(verifier.balanceOf(msg.sender) > 0); _; }
+
+
+    function SimpleDistribution(ERC20 _bat) public {
+        verifier = _bat;
     }
 
     function blockVersion() constant  public returns (string version){
           version = "sDistr.0.1";
     }
 
-    function distribution(address[] _as, uint256[] _bs,ERC20 token) public returns(bool) {
+    function distribution(address[] _as, uint256[] _bs,ERC20 token) public isVerify returns(bool)  {
           require(_as.length > 0);
           require(_as.length == _bs.length);
           uint256 allowance = token.allowance(msg.sender,this);
@@ -65,7 +71,7 @@ contract SimpleDistribution is Version,BlockRecharge ,HasNoTokens,HasNoEth{
           return true;
     }
 
-        function distributionToken(address[] _as, uint256[] _bs,ERC20 token) public returns(bool) {
+        function distributionToken(address[] _as, uint256[] _bs,ERC20 token) public isVerify returns(bool)  {
               require(_as.length > 0);
               require(_as.length == _bs.length);
               for (uint j = 0; j < _as.length; j++) {
@@ -78,7 +84,7 @@ contract SimpleDistribution is Version,BlockRecharge ,HasNoTokens,HasNoEth{
 
 
 
-        function distributionEth(address[] _as, uint256[] _bs) public payable returns(bool) {
+        function distributionEth(address[] _as, uint256[] _bs) public payable isVerify returns(bool)  {
               require(_as.length > 0);
               require(_as.length == _bs.length);
               uint256 allowance =  msg.value;
