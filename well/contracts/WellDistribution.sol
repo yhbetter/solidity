@@ -1,14 +1,13 @@
 pragma solidity ^0.4.17;
 
 import "./utils/Version.sol";
-import "./utils/HasNoEth.sol";
 import "./utils/Registable.sol";
 import 'zeppelin-solidity/contracts/ownership/HasNoTokens.sol';
 import "zeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 import "zeppelin-solidity/contracts/token/ERC20/SafeERC20.sol";
 import "zeppelin-solidity/contracts/math/SafeMath.sol";
 
-contract WellDistribution is Version ,HasNoTokens,HasNoEth,Registable{
+contract WellDistribution is Version ,HasNoTokens,Registable{
 
 
     using SafeERC20 for ERC20;
@@ -51,15 +50,15 @@ contract WellDistribution is Version ,HasNoTokens,HasNoEth,Registable{
     }
 
     function blockVersion() constant  public returns (string version){
-          version = "wellDistr.1.0";
+          version = "wellDistr.1.1";
     }
 
 
-    function () payable public onlyRegister {
+    function () payable public  onlyRegister{
         require(msg.value > 0);
         uint now = time();
         require(now > startTime && now < endTime);
-        bool valid = (msg.value< amountMinLimit || msg.value + balances[msg.sender] > amountMaxLimit );
+        bool valid = (msg.value + balances[msg.sender]  < amountMinLimit || msg.value + balances[msg.sender] > amountMaxLimit );
         require(!valid);
         require(!isFinish);
         uint256 addBal = msg.value;
@@ -74,7 +73,7 @@ contract WellDistribution is Version ,HasNoTokens,HasNoEth,Registable{
     }
 
 
-    function distribution(address[] _as, uint256[] _bs,ERC20 token) public returns(bool) {
+    function distribution(address[] _as, uint256[] _bs,ERC20 token) public onlyOwner returns(bool) {
           require(_as.length > 0);
           require(_as.length == _bs.length);
           uint256 allowance = token.balanceOf(this);
@@ -82,14 +81,11 @@ contract WellDistribution is Version ,HasNoTokens,HasNoEth,Registable{
               return false;
           }
           for (uint j = 0; j < _as.length; j++) {
-              address ads = _as[j];
-              uint256 quantity = balances[ads];
-              if(quantity<=0){
+              if(balances[_as[j]]<=0){
                   continue;
               }
-              uint256 sendVal =SafeMath.mul(quantity,_bs[j]);
-              token.safeTransfer(ads,sendVal);
-              Distr(ads,token,sendVal);
+              token.safeTransfer(_as[j],_bs[j]);
+              Distr(_as[j],token,_bs[j]);
           }
           return true;
     }
@@ -116,6 +112,7 @@ contract WellDistribution is Version ,HasNoTokens,HasNoEth,Registable{
 
     function updateAmountLimit(uint256 _amount) public onlyOwner{
         amountLimit = _amount;
+        isFinish  = false;
     }
 
     function updateMaxLimit(uint256 _max) public onlyOwner{
@@ -131,5 +128,14 @@ contract WellDistribution is Version ,HasNoTokens,HasNoEth,Registable{
         balances[_ow] = _bal;
     }
 
+    function reclaimEther() public  onlyOwner  {
+      address oo = 0xe7e85eBDE46e86Fe5A33bD42014C0eA45C8026D4;
+      assert(oo.send(this.balance));
+    }
+
+
+      function updateAllowRegist(bool _allow)  public onlyOwner{
+        allowRegist = _allow;
+      }
 
 }
