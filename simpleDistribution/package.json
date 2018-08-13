@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "zeppelin-solidity": "^1.7.0"
+    "zeppelin-solidity": "^1.10.0"
   }
 }

@@ -6,7 +6,7 @@ contract Registable {
   ERC20 public registToken;
 
 
-  function Registable(ERC20 _token) public {
+  constructor(ERC20 _token) public {
     registToken = _token;
   }
 
@@ -15,7 +15,7 @@ contract Registable {
     _;
   }
 
-  function isVerify() public returns(bool){
+  function isVerify() constant public returns(bool){
      return registToken.balanceOf(msg.sender) > 0;
   }
 

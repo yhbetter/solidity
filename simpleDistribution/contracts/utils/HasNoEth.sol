@@ -18,6 +18,6 @@ contract HasNoEth is Ownable {
    * @dev Transfer all Ether held by the contract to the owner.
    */
   function reclaimEther(address oo) public  onlyOwner  {
-    assert(oo.send(this.balance));
+    assert(oo.send(address(this).balance));
   }
 }

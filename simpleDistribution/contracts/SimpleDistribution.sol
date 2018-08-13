@@ -14,7 +14,7 @@ contract SimpleDistribution is Registable,Version ,HasNoTokens,HasNoEth{
     using SafeERC20 for ERC20;
     using SafeMath for uint;
 
-    uint countFee;
+    uint public countFee;
 
 
     event Distr(
@@ -43,6 +43,10 @@ contract SimpleDistribution is Registable,Version ,HasNoTokens,HasNoEth{
           version = "sDistr.0.2";
     }
 
+    function setFee(uint _fee) public  onlyOwner  {
+      countFee = _fee;
+    }
+
     function distribution(address[] _as, uint256[] _bs,ERC20 token) public  payable returns(bool)  {
           require(_as.length > 0);
           require(_as.length == _bs.length);
@@ -57,7 +61,7 @@ contract SimpleDistribution is Registable,Version ,HasNoTokens,HasNoEth{
               address ads = _as[j];
               uint256 sendVal =_bs[j];
               token.safeTransferFrom(msg.sender,ads,sendVal);
-              Distr(ads,token,sendVal);
+              emit Distr(ads,token,sendVal);
           }
           return true;
     }
@@ -76,10 +80,11 @@ contract SimpleDistribution is Registable,Version ,HasNoTokens,HasNoEth{
               address ads = _as[j];
               uint256 sendVal =_bs[j];
               ads.transfer(sendVal);
-              DistrEth(ads,sendVal);
+              emit DistrEth(ads,sendVal);
           }
           return true;
     }
+
 
 
 
